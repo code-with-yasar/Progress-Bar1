@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: linear-gradient(#000000,20% #3533cd);
+    /* background-image: url(./bg.webp);  */
+    background-size: cover; 
+}
+
+
+
+section3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255,255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    width: 20%;
+    height: 55vh;
+    margin-top: 6%;
+    border-radius: 20px;
+    border: 5px double rgba(255,255, 255, 0.3);
+    margin-left: 40%;
+    box-shadow: 0 0 5px whitesmoke,
+                0 0 25px rosybrown;
+}
+.sub-title {
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    color: darkgreen;
+}
+.sub-title span {
+    color: rosybrown;
+
+}
+.container{
+    width: 400px;
+    height: 200px;
+    padding: 5px;
+}
+.heading {
+    justify-content: center;
+    text-align: center;
+    color: darkblue;
+    margin: 20px;
+}
+.underline {
+    width: 55%;
+    height: 5px;
+    background: #eae6e6;
+    border-radius: 3px;
+    position: absolute;
+    top: 3.3rem;
+    left: 70px;
+    overflow: hidden;
+}
+.underline span {
+    width: 25px;
+    height: 100%;
+    background: darkblue;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.bar {
+    font-size: 40px;
+}
+
+.Technical-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 18px;
+    font-weight: 400;
+    color: darkblue;
+    margin-left: 10%;
+    justify-content: space-evenly;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 80%;
+    height: 5px;
+    margin-left: 10%;
+    background-color: #eae6e6;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: darkblue;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+
+
+
+.progress-line.C span{
+    width: 85%;
+}
+.progress-line.html5 span{
+    width: 90%;
+}
+.progress-line.CSS3 span{
+    width: 75%;
+}
+.progress-line.JavaScript span{
+    width: 60%;
+}
+.progress-line.Java span{
+    width: 75%;
+}
+
+
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: darkblue;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    top:-28;
+    right:-20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+    
+}
+.progress-line.C span::after{
+    content: "85%";
+    top: -24px;
+}
+.progress-line.html5 span::after{
+    content: "90%";
+    top: -24px;
+}
+.progress-line.CSS3 span::after{
+    content: "75%";
+    top: -24px;
+}
+.progress-line.JavaScript span::after{
+    content: "60%";
+    top: -24px;
+}
+.progress-line.Java span::after{
+    content: "75%";
+    top: -24px;
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: darkblue;
+    top: -10px;
+    right: 0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+    
+
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
